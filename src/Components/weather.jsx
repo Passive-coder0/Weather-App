@@ -1,17 +1,22 @@
-const Weather = ({ temperature, description, icon }) => {
+const Weather = ({ temperature, description, icon, day }) => {
+  // Logs if day(1) or night(0)
+  console.log(day);
+  
   return (
     <div className="weather-section">
-      <div className="border-b pb-8 flex flex-col items-center gap-4 justify-center">
+      <div className="border-b pb-8 flex flex-col items-center justify-center">
+        {/* Javascript is dumb sometimes... */}
+        <p className="text-3xl mb-4 font-bold">{day === 0 ? "Night" : "Day"}</p>
         <img
-          src={icon ? icon : "/icons/clouds.svg"}
+          src={icon ? icon : "/Day/no-result.svg"}
           alt="Weather Icon"
-          className="w-28 aspect-square"
+          className="w-28 h-28 mb-4 "
         />
-
+        <p className="text-3xl mb-4 font-bold">{description ? description : "Search for a city"}</p>
         <h2 className="font-bold text-6xl flex">
           {temperature ? temperature : 22} <span className="celsius">C°</span>
         </h2>
-        <p className="text-2xl">{description ? description : "Partly Cloudy"}</p>
+        
       </div>
     </div>
   );

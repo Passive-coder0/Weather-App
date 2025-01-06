@@ -4,14 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background:linear-gradient(#F5EEFF, #DAC3F8) ;  
-}
 #root{
     min-width: 400px;
 }
 .main {
-    background: linear-gradient(#352163, #33143c);
     position: relative;
     z-index: 1;
     overflow: hidden;
