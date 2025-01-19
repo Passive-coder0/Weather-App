@@ -77,7 +77,7 @@ const App = () => {
       <div className="hourly-forecast pb-4 px-3 md:px-6 ">
         <h2 className="text-2xl text-white pb-6 text-center">24-Hour Forecast</h2>
         {hourlyForecast.length === 0 ? (
-          <p className="pt-6 pb-10 text-center text-xl">
+          <p className="py-6 text-center text-xl">
             Enter a city name to get Hourly Forecast
           </p>
         ) : (
