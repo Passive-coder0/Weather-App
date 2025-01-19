@@ -1,15 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <!-- Linking Google fonts for icons-->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- Linking Google fonts for icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- Include particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
-  <body class="flex items-center justify-center min-h-screen bg-gradient-to-b from-sky-500 to-sky-300 dark:bg-gradient-to-b dark:from-violet-800 dark:to-sky-900">
-    <div class="w-1/3" id="root"></div>
+  <body
+    class="flex items-center justify-center min-h-screen bg-gradient-to-b from-sky-600 to-sky-400 dark:bg-gradient-to-b dark:from-violet-800 dark:to-sky-900 relative overflow-hidden"
+  >
+    <!-- Particles.js container -->
+    <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+    <div class="w-1/4 z-10" id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      // Initialize particles.js
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          shape: {
+            type: 'circle'
+          },
+          opacity: {
+            value: 0.8,
+            random: true
+          },
+          size: {
+            value: 5,
+            random: true
+          },
+          move: {
+            enable: true,
+            speed: 4,
+            direction: 'none',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          events: {
+            onclick: {
+              enable: true,
+              mode: 'repulse'
+            }
+          }
+        }
+      });
+    </script>
   </body>
 </html>

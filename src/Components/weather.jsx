@@ -13,7 +13,7 @@ const Weather = ({ temperature, description, icon, day }) => {
           className="w-28 h-28 mb-4 "
         />
         <p className="text-3xl mb-4 font-bold">{description ? description : "Search for a city"}</p>
-        <h2 className="font-bold text-6xl flex">
+        <h2 className="text-4xl font-bold md:text-5xl flex">
           {temperature ? temperature : 22} <span className="celsius">C°</span>
         </h2>
         

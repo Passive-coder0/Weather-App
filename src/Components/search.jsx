@@ -19,7 +19,6 @@ const Search = ({ getWeatherDetails }) => {
           //Mkes an API URL using the latitude and longitude
           const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}`;
           console.log(`Latitude: ${latitude} , Longitude: ${longitude}`);
-          
 
           // Call getWeatherDetails with the url
           getWeatherDetails(API_URL);
@@ -39,23 +38,23 @@ const Search = ({ getWeatherDetails }) => {
   return (
     <div className="flex justify-center gap-4">
       <form
-        className="rounded-md flex gap-2 items-center border p-2 h-14 bg-white bg-opacity-5 w-full"
+        className="rounded-md flex gap-2 items-center border p-2 h-13 bg-white bg-opacity-5 w-60 lg:w-full"
         action="#"
         onSubmit={handleCitySearch}
       >
         {/*This Is Awesome, Text Icons!!! */}
         <span className="material-symbols-rounded text-white">Search</span>
         <input
-          className="search-input w-full h-full bg-transparent px-4 text-lg border-white border-opacity-25 outline-none placeholder:text-slate-50"
+          className="search-input w-full h-full bg-transparent px-2 md:px-4 text-lg border-white border-opacity-25 outline-none placeholder:text-slate-50"
           type="search"
           placeholder="Enter a city name"
           required
         />
       </form>
       {/*This Is Awesome, Text Icons!!! */}
-      <button onClick={handleLocation} className="location-button">
+      <button onClick={handleLocation} className="location-button group">
         <span
-          className="material-symbols-rounded border rounded-md border-opacity-10 p-4 bg-white bg-opacity-5"
+          className="material-symbols-rounded border rounded-md border-opacity-10 p-2 md:p-4 bg-white bg-opacity-5 group-hover:bg-opacity-10 group-hover:scale-105 transition-all duration-300"
           title="Your Location"
         >
           my_location

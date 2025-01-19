@@ -65,7 +65,7 @@ const App = () => {
   }
 
   return (
-    <div className="main bg-gradient-to-b from-sky-600 to-sky-400 text-slate-100 dark:bg-gradient-to-b dark:from-violet-700 dark:to-sky-800 rounded-2xl flex p-8 pb-0 flex-col gap-10">
+    <div className="main bg-gradient-to-b from-sky-600 to-sky-400 text-slate-100 dark:bg-gradient-to-b dark:from-violet-700 dark:to-sky-800 rounded-2xl flex p-4 md:p-8 pb-0 flex-col gap-10">
       <Search getWeatherDetails={getWeatherDetails}></Search>
       <Weather
         temperature={currentWeather.temperature}
@@ -74,9 +74,10 @@ const App = () => {
         day={currentWeather.isDay}
       ></Weather>
       {/* Shows default text instead of forecast */}
-      <div className="hourly-forecast pb-4 px-6">
+      <div className="hourly-forecast pb-4 px-3 md:px-6 ">
+        <h2 className="text-2xl text-white pb-6 text-center">24-Hour Forecast</h2>
         {hourlyForecast.length === 0 ? (
-          <p className="pb-6 text-center text-xl">
+          <p className="pt-6 pb-10 text-center text-xl">
             Enter a city name to get Hourly Forecast
           </p>
         ) : (
