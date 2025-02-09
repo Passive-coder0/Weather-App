@@ -6,7 +6,7 @@ const Search = ({ getWeatherDetails }) => {
     e.preventDefault();
     const searchInput = e.target.querySelector(".search-input");
     console.log(searchInput.value);
-    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}`;
+    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}`;
     //Calls getWeatherDetails with the Url
     getWeatherDetails(API_URL);
   };
@@ -16,8 +16,8 @@ const Search = ({ getWeatherDetails }) => {
         async (position) => {
           const { latitude, longitude } = position.coords;
 
-          //Mkes an API URL using the latitude and longitude
-          const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}`;
+          //Makes an API URL using the latitude and longitude
+          const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude},${longitude}`;
           console.log(`Latitude: ${latitude} , Longitude: ${longitude}`);
 
           // Call getWeatherDetails with the url
